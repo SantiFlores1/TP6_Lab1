@@ -37,10 +37,10 @@ private DefaultTableModel modelo=new DefaultTableModel();
         setClosable(true);
 
         jlRubro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jlRubro.setText("Seleccione un rubro:");
+        jlRubro.setText("Escriba los primeros caracteres:");
 
         jlTitulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jlTitulo.setText("PRODUCTOS POR RUBRO");
+        jlTitulo.setText("PRODUCTOS POR NOMBRE");
 
         jtLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,16 +77,19 @@ private DefaultTableModel modelo=new DefaultTableModel();
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jtfConsulta))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jlTitulo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtfConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(72, 72, 72)
+                                .addComponent(jlTitulo)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +109,26 @@ private DefaultTableModel modelo=new DefaultTableModel();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtfConsultaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfConsultaKeyReleased
-        // TODO add your handling code here:
+                borrarFilas();
+        
+        String find=jtfConsulta.getText().toLowerCase();
+        System.out.println(find);
+        for(Producto prod:productos){
+         
+            if(prod.getDescripcion().toLowerCase().startsWith(find)){
+            
+                Vector renglon=new Vector();
+                renglon.add(prod.getCodigo());
+                renglon.add(prod.getDescripcion());
+                renglon.add(prod.getPrecio());
+                renglon.add(prod.getStock());
+                renglon.add(prod.getRubro());
+                modelo.addRow(renglon);
+                System.out.println(renglon);
+                
+            }
+            
+        }
     }//GEN-LAST:event_jtfConsultaKeyReleased
 
 
