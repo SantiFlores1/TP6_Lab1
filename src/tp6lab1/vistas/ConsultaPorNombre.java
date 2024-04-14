@@ -28,7 +28,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlRubro = new javax.swing.JLabel();
+        jlNombre = new javax.swing.JLabel();
         jlTitulo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtLista = new javax.swing.JTable();
@@ -36,8 +36,8 @@ private DefaultTableModel modelo=new DefaultTableModel();
 
         setClosable(true);
 
-        jlRubro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jlRubro.setText("Escriba los primeros caracteres:");
+        jlNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jlNombre.setText("Escriba los primeros caracteres:");
 
         jlTitulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jlTitulo.setText("PRODUCTOS POR NOMBRE");
@@ -77,7 +77,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jtfConsulta))
                     .addGroup(layout.createSequentialGroup()
@@ -98,7 +98,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
                 .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,7 +153,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel jlRubro;
+    private javax.swing.JLabel jlNombre;
     private javax.swing.JLabel jlTitulo;
     private javax.swing.JTable jtLista;
     private javax.swing.JTextField jtfConsulta;

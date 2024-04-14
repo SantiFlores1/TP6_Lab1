@@ -26,7 +26,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jlRubro" min="-2" pref="205" max="-2" attributes="0"/>
+                      <Component id="jlNombre" min="-2" pref="205" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jtfConsulta" max="32767" attributes="0"/>
                   </Group>
@@ -55,7 +55,7 @@
               <Component id="jlTitulo" min="-2" pref="31" max="-2" attributes="0"/>
               <EmptySpace pref="22" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlRubro" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="jlNombre" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="jtfConsulta" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -66,7 +66,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jlRubro">
+    <Component class="javax.swing.JLabel" name="jlNombre">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="14" style="0"/>
