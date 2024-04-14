@@ -34,7 +34,7 @@ private TreeSet<Producto> productos=new TreeSet<>();
         jMenu1 = new javax.swing.JMenu();
         jmiGdp = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jmConsultas = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -72,8 +72,13 @@ private TreeSet<Producto> productos=new TreeSet<>();
 
         jMenu2.setText("Consultas");
 
-        jMenuItem2.setText("Consulta por rubro");
-        jMenu2.add(jMenuItem2);
+        jmConsultas.setText("Consulta por rubro");
+        jmConsultas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmConsultasActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmConsultas);
 
         jMenuItem3.setText("Consulta por nombre");
         jMenu2.add(jMenuItem3);
@@ -111,6 +116,15 @@ private TreeSet<Producto> productos=new TreeSet<>();
         gdp.setVisible(true);
         jDesktopPane1.add(gdp);
     }//GEN-LAST:event_jmiGdpActionPerformed
+
+    private void jmConsultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmConsultasActionPerformed
+
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        ConsultaPorRubro gdp=new ConsultaPorRubro(productos);
+        gdp.setVisible(true);
+        jDesktopPane1.add(gdp);
+    }//GEN-LAST:event_jmConsultasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,9 +166,9 @@ private TreeSet<Producto> productos=new TreeSet<>();
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jmConsultas;
     private javax.swing.JMenuItem jmiGdp;
     // End of variables declaration//GEN-END:variables
 }
