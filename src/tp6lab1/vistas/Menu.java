@@ -114,6 +114,20 @@ private TreeSet<Producto> productos=new TreeSet<>();
         jDesktopPane1.repaint();
         GestionDeProductos gdp=new GestionDeProductos(productos);
         gdp.setVisible(true);
+        
+        int escritorioAncho = jDesktopPane1.getWidth();
+        int escritorioAlto = jDesktopPane1.getHeight();
+        int ventanitaAncho = gdp.getWidth();
+        int ventanitaAlto = gdp.getHeight();
+
+           int x = (escritorioAncho - ventanitaAncho) / 2;
+           int y = (escritorioAlto - ventanitaAlto) / 2;
+
+    
+           gdp.setLocation(x, y);
+        
+        
+        
         jDesktopPane1.add(gdp);
     }//GEN-LAST:event_jmiGdpActionPerformed
 
@@ -121,9 +135,22 @@ private TreeSet<Producto> productos=new TreeSet<>();
 
         jDesktopPane1.removeAll();
         jDesktopPane1.repaint();
-        ConsultaPorRubro gdp=new ConsultaPorRubro(productos);
-        gdp.setVisible(true);
-        jDesktopPane1.add(gdp);
+        ConsultaPorRubro cpr=new ConsultaPorRubro(productos);
+        cpr.setVisible(true);
+        
+        int escritorioAncho = jDesktopPane1.getWidth();
+        int escritorioAlto = jDesktopPane1.getHeight();
+        int ventanitaAncho = cpr.getWidth();
+        int ventanitaAlto = cpr.getHeight();
+
+           int x = (escritorioAncho - ventanitaAncho) / 2;
+           int y = (escritorioAlto - ventanitaAlto) / 2;
+
+    
+           cpr.setLocation(x, y);
+        
+        
+        jDesktopPane1.add(cpr);
     }//GEN-LAST:event_jmConsultasActionPerformed
 
     /**

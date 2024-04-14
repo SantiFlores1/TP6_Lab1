@@ -35,11 +35,13 @@ private DefaultTableModel modelo=new DefaultTableModel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtLista = new javax.swing.JTable();
 
-        jlRubro.setFont(new java.awt.Font("Malgun Gothic Semilight", 0, 14)); // NOI18N
+        setClosable(true);
+
+        jlRubro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jlRubro.setText("Seleccione un rubro:");
 
-        jlTitulo.setFont(new java.awt.Font("Microsoft JhengHei", 0, 18)); // NOI18N
-        jlTitulo.setText("Listado de productos por rubro");
+        jlTitulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jlTitulo.setText("PRODUCTOS POR RUBRO");
 
         jcCategorias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,7 +57,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Código", "Descripción", "Precio", "Stock"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -78,27 +80,27 @@ private DefaultTableModel modelo=new DefaultTableModel();
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(jcCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(72, 72, 72)
+                        .addComponent(jlTitulo))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jlTitulo)))
+                        .addGap(44, 44, 44)
+                        .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(15, 15, 15)
                 .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlRubro, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jcCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
 
         pack();
@@ -122,7 +124,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
 
               modelo.addRow(renglon);
             }
-        }    // TODO add your handling code here:
+        }   
     }//GEN-LAST:event_jcCategoriasActionPerformed
 
 
@@ -143,7 +145,6 @@ private DefaultTableModel modelo=new DefaultTableModel();
          modelo.addColumn("Descripcion");
          modelo.addColumn("Precio");
          modelo.addColumn("Stock");
-          modelo.addColumn("Rubro");
          jtLista.setModel(modelo);
      }
      
