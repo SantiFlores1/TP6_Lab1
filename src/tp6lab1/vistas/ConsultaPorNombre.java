@@ -35,7 +35,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
         jtfConsulta = new javax.swing.JTextField();
 
         setClosable(true);
-        setTitle("\"DeTodo S.A.\"");
+        setTitle("DeTodo S.A.");
 
         jlNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jlNombre.setText("Escriba los primeros caracteres:");

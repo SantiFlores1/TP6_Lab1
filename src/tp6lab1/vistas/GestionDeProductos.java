@@ -47,7 +47,7 @@ public class GestionDeProductos extends javax.swing.JInternalFrame {
         jbEliminar = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
 
-        setTitle("\"DeTodo S.A.\"");
+        setTitle("DeTodo S.A.");
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setText("GESTIÓN DE PRODUCTOS");

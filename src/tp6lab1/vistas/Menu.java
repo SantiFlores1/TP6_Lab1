@@ -39,7 +39,7 @@ private TreeSet<Producto> productos=new TreeSet<>();
         jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Supermercado \"DeTodo S.A.\"");
+        setTitle("Supermercado DeTodo S.A.");
 
         jDesktopPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
