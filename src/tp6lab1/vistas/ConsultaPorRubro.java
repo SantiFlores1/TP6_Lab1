@@ -36,6 +36,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
         jtLista = new javax.swing.JTable();
 
         setClosable(true);
+        setTitle("\"DeTodo S.A.\"");
 
         jlRubro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jlRubro.setText("Seleccione un rubro:");
