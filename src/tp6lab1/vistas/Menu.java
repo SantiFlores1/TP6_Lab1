@@ -12,7 +12,9 @@ import tp6lab1.Entidades.Producto;
  * @author IGNACIO
  */
 public class Menu extends javax.swing.JFrame {
-private TreeSet<Producto> productos=new TreeSet<>();
+
+    private TreeSet<Producto> productos = new TreeSet<>();
+
     /**
      * Creates new form Menu
      */
@@ -82,9 +84,19 @@ private TreeSet<Producto> productos=new TreeSet<>();
         jMenu2.add(jmConsultas);
 
         jMenuItem3.setText("Consulta por nombre");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("Consulta por precio");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -114,22 +126,19 @@ private TreeSet<Producto> productos=new TreeSet<>();
         // TODO add your handling code here:
         jDesktopPane1.removeAll();
         jDesktopPane1.repaint();
-        GestionDeProductos gdp=new GestionDeProductos(productos);
+        GestionDeProductos gdp = new GestionDeProductos(productos);
         gdp.setVisible(true);
-        
+
         int escritorioAncho = jDesktopPane1.getWidth();
         int escritorioAlto = jDesktopPane1.getHeight();
         int ventanitaAncho = gdp.getWidth();
         int ventanitaAlto = gdp.getHeight();
 
-           int x = (escritorioAncho - ventanitaAncho) / 2;
-           int y = (escritorioAlto - ventanitaAlto) / 2;
+        int x = (escritorioAncho - ventanitaAncho) / 2;
+        int y = (escritorioAlto - ventanitaAlto) / 2;
 
-    
-           gdp.setLocation(x, y);
-        
-        
-        
+        gdp.setLocation(x, y);
+
         jDesktopPane1.add(gdp);
     }//GEN-LAST:event_jmiGdpActionPerformed
 
@@ -137,23 +146,62 @@ private TreeSet<Producto> productos=new TreeSet<>();
 
         jDesktopPane1.removeAll();
         jDesktopPane1.repaint();
-        ConsultaPorRubro cpr=new ConsultaPorRubro(productos);
+        ConsultaPorRubro cpr = new ConsultaPorRubro(productos);
         cpr.setVisible(true);
-        
+
         int escritorioAncho = jDesktopPane1.getWidth();
         int escritorioAlto = jDesktopPane1.getHeight();
         int ventanitaAncho = cpr.getWidth();
         int ventanitaAlto = cpr.getHeight();
 
-           int x = (escritorioAncho - ventanitaAncho) / 2;
-           int y = (escritorioAlto - ventanitaAlto) / 2;
+        int x = (escritorioAncho - ventanitaAncho) / 2;
+        int y = (escritorioAlto - ventanitaAlto) / 2;
 
-    
-           cpr.setLocation(x, y);
-        
-        
+        cpr.setLocation(x, y);
+
         jDesktopPane1.add(cpr);
     }//GEN-LAST:event_jmConsultasActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        ConsultaPorNombre cpn = new ConsultaPorNombre(productos);
+        cpn.setVisible(true);
+
+        int escritorioAncho = jDesktopPane1.getWidth();
+        int escritorioAlto = jDesktopPane1.getHeight();
+        int ventanitaAncho = cpn.getWidth();
+        int ventanitaAlto = cpn.getHeight();
+
+        int x = (escritorioAncho - ventanitaAncho) / 2;
+        int y = (escritorioAlto - ventanitaAlto) / 2;
+
+        cpn.setLocation(x, y);
+
+        jDesktopPane1.add(cpn);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        ConsultaPorPrecio cpp = new ConsultaPorPrecio(productos);
+        cpp.setVisible(true);
+
+        int escritorioAncho = jDesktopPane1.getWidth();
+        int escritorioAlto = jDesktopPane1.getHeight();
+        int ventanitaAncho = cpp.getWidth();
+        int ventanitaAlto = cpp.getHeight();
+
+        int x = (escritorioAncho - ventanitaAncho) / 2;
+        int y = (escritorioAlto - ventanitaAlto) / 2;
+
+        cpp.setLocation(x, y);
+
+        jDesktopPane1.add(cpp);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments

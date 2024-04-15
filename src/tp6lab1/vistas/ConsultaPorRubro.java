@@ -133,7 +133,7 @@ private DefaultTableModel modelo=new DefaultTableModel();
     
         Rubro comestible=new Rubro(1,"Comestible");
         Rubro limpieza=new Rubro(2,"Limpieza");
-        Rubro perfumeria=new Rubro(3,"Perfumeria");
+        Rubro perfumeria=new Rubro(3,"Perfumería");
         
         jcCategorias.addItem(comestible);
         jcCategorias.addItem(limpieza);
