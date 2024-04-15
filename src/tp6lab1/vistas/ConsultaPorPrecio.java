@@ -114,25 +114,32 @@ public class ConsultaPorPrecio extends javax.swing.JInternalFrame {
     private void jtHastaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtHastaKeyReleased
         // TODO add your handling code here:
         borrarFilas();
-        Double desde = Double.parseDouble(jtDesde.getText());
-        Double hasta = Double.parseDouble(jtHasta.getText());
-        for (Producto prod : productos) {
-            if (desde <= prod.getPrecio() && hasta >= prod.getPrecio()) {
-                Vector renglon = new Vector<>();
-                renglon.add(prod.getCodigo());
-                renglon.add(prod.getDescripcion());
-                renglon.add(prod.getPrecio());
-                renglon.add(prod.getStock());
+   
+        if (!jtDesde.getText().isEmpty() && !jtHasta.getText().isEmpty()) {
+        
+            Double desde = Double.parseDouble( jtDesde.getText());
+            Double hasta = Double.parseDouble(jtHasta.getText());
+               for (Producto prod : productos) {
+                    if (desde <= prod.getPrecio() && hasta >= prod.getPrecio()) {
+                    Vector renglon = new Vector<>();
+                    renglon.add(prod.getCodigo());
+                    renglon.add(prod.getDescripcion());
+                    renglon.add(prod.getPrecio());
+                    renglon.add(prod.getStock());
 
                 modelo.addRow(renglon);
             }
+          }
         }
-
     }//GEN-LAST:event_jtHastaKeyReleased
 
     private void jtDesdeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtDesdeKeyReleased
         // TODO add your handling code here:
         borrarFilas();
+       
+   
+        if (!jtDesde.getText().isEmpty() && !jtHasta.getText().isEmpty()) {
+        
         Double desde = Double.parseDouble(jtDesde.getText());
         Double hasta = Double.parseDouble(jtHasta.getText());
         for (Producto prod : productos) {
@@ -145,6 +152,7 @@ public class ConsultaPorPrecio extends javax.swing.JInternalFrame {
 
                 modelo.addRow(renglon);
             }
+          }
         }
     }//GEN-LAST:event_jtDesdeKeyReleased
     private void llenarCombo() {
